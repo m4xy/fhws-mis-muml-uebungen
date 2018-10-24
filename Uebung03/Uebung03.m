@@ -1,10 +1,11 @@
-% Übung 1 %
+% Uebung 3
+% Aufgabe 1 
 
 Fs = 128; % Abtasten/s (sampling frequency)
 dt = 1/Fs; % Zeitspanne Abtastung (sample time)
-SingalDurationInSec = 4; % Dauer des Signal
-countSamplePoints = SingalDurationInSec/dt; % Anzahl der Abtastsignale (Samples)
-t = (0:dt:SingalDurationInSec-dt); % Zeitvektor (time vector)
+SignalDurationInSec = 4; % Dauer des Signal
+countSamplePoints = SignalDurationInSec/dt; % Anzahl der Abtastsignale (Samples)
+t = (0:dt:SignalDurationInSec-dt); % Zeitvektor (time vector)
 f1 = sin(32*pi*t); %Signal f1
 f2 = sin(32*pi*t) + 0.3*cos(48*pi*t); %Signal f1
 
@@ -26,9 +27,7 @@ f = Fs/2*linspace(0,1,countSamplePoints/2);
 freqSpec = 2*abs(Y(1:countSamplePoints/2));
 
 figure;
-%Plot f1=sin(32*pi*t)
 subplot(1,2,1)
-%x=t, y
 plot(t,f1)
 title('f1(t)=sin(32*pi*t)')
 xlabel('Time (s)');
